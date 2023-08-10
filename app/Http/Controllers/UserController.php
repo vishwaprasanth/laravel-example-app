@@ -24,4 +24,15 @@ class UserController extends Controller
 
 		return redirect('view')->with('delete','Record Deleted Successfully.');
     }
+    function edit($id)
+    {
+        $data = Register::find($id);
+        return view('edit', ['data' => $data]);
+    }
+    function update($id, Request $request){
+        $Register = Register::find($id);
+        $Register->name = $request['name'];
+        $Register->email = $request['email'];
+        $Register->password = $request['password'];
+    }
 }

@@ -22,3 +22,7 @@ Route::get('/register','UserController@Register');
 Route::get('/view','UserController@view');   
 
 Route::get('/delete/{id}','UserController@delete');
+
+Route::get('/edit/{id}','UserController@edit');
+
+Route::get('/update/{id}','UserController@update');

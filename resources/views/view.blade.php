@@ -21,7 +21,7 @@
             <th>Password:</th>
             <td>{{ $register->password }}</td>
         
-            <td><a href="update">Update</a></td>
+            <td><a href="edit/{{ $register->id }}">Update</a></td>
         
             <td>
             <a href="delete/{{ $register->id }}">Delete</a>
